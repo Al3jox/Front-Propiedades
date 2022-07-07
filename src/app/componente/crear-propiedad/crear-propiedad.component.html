@@ -1,0 +1,110 @@
+
+
+<div class="container mt-5 bg-transparent pb-2 contenedor-ventana">
+
+  
+
+    <div class="text-center fs-1 text-primary my-5 ">
+      Publica tus propiedades
+    </div>
+
+  <form [formGroup]="formValue">
+
+    <div class="container mt-3">
+      <div class="fs-3 text-primary my-2">
+        <p>
+            Diligencia los siguientes campos: 
+        </p>
+      </div>
+    </div>
+
+    <div class="row pb-5">
+      <div class="col-12 col-md-6">
+          <!-- Nombres -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Tus nombres" style="width: calc(100%);" formControlName = "nombreCaptura">
+            <label for="floatingInput text-primary">Nombres</label>
+          </div>
+      </div>
+  
+      <div class="col-12 col-md-6">
+        <!-- Tipo -->
+        <div class="form-floating  mb-3">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example" formControlName = "tipoCaptura">
+            <option selected>Selecciona el tipo de tu propiedad</option>
+            <option *ngFor="let item of tipoCaptura" value="{{item}}">{{item}}</option>
+          </select>
+          <label for="floatingSelect">Propiedad</label>
+        </div>
+    </div>
+  
+      <div class="col-12 col-md-6">
+          <!-- Descripción -->
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Dejanos tus comentarios" id="floatingTextarea2" style="height: 100px" formControlName = "descripcionCaptura"></textarea>
+            <label for="floatingTextarea2">Descripción</label>
+          </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <!-- Área -->
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: calc(100%);" formControlName = "areaCaptura">
+          <label for="floatingInput text-primary">Área total de la vivienda</label>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <!-- Num Cuartos -->
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: calc(100%);" formControlName = "numCuartosCaptura">
+          <label for="floatingInput text-primary">Número de cuartos</label>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <!-- Num Baños -->
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: calc(100%);" formControlName = "numbanosCaptura">
+          <label for="floatingInput text-primary">Número de baños</label>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <!-- Num Parqueaderos -->
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: calc(100%);" formControlName = "numParqueaderosCaptura">
+          <label for="floatingInput text-primary">Número de parqueaderos</label>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <!-- Precio -->
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: calc(100%);" formControlName = "valorCaptura">
+          <label for="floatingInput text-primary">Valor de la vivienda</label>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <!-- Dirección -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: calc(100%);" formControlName = "direccionCaptura">
+          <label for="floatingInput text-primary">Dirección de la vivienda</label>
+        </div>
+    </div>
+
+  
+      <!-- ============================================================================================================================================= -->
+
+  
+          <div>
+            <!-- Btn -->
+          <button (click)="crearPropiedad()" type="submit" class="btn btn-warning my-3" style="width: calc(100%);">Crear Propiedad</button>
+          </div>
+  
+    </div>
+
+  </form>
+
+</div>
